@@ -1,7 +1,7 @@
 # findyourjob
 Интенсив Glo Academy
 
-## Используются технологии
+## Используются
 - HTML
 - CSS
 - Bootstrap
