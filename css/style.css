@@ -17,6 +17,7 @@ body{
 
 .header {
   background: #f2f3f6;
+  overflow-x: hidden;
 }
 
 .menu {
@@ -53,7 +54,9 @@ body{
 
 .button-icon{
   vertical-align: middle;
-  margin-right: 10px;
+}
+.button-text{
+  margin-left: 10px;
 }
 
 .hero-title {
@@ -173,6 +176,7 @@ body{
   padding: 10px 25px;
   font-weight: 700;
   color: #fff;
+  white-space: nowrap;
 }
 
 .more{
@@ -180,6 +184,7 @@ body{
   color: var(--blue);
   text-decoration: none;
   margin: 0 25px 0 auto;
+  white-space: nowrap;
 }
 
 .subscribe{
@@ -206,7 +211,7 @@ body{
 }
 
 .footer{
-  padding: 70px 100px;
+  padding: 70px 0 100px;
 }
 
 .footer-desc, .footer-copy{
@@ -221,16 +226,42 @@ body{
   font-size: 16px;
   margin: 0;
 }
+
 .footer-list{
   list-style: none;
   padding: 0;
 }
+
 .footer-list-item{
   margin-bottom: 10px;
 }
+
 .footer-list-link{
   text-decoration: none;
   color: inherit;
+  transition: .2s;
+}
+
+.close{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  width: fit-content;
+  padding: 20px;
+  display: none;
+}
+
+.navbar-mobile{
+  display: none;
+}
+.burger{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  filter: brightness(4);
+  transition: .15s;
 }
 
 @media(hover) {
@@ -246,5 +277,110 @@ body{
   }
   .card:hover .card-icon{
     fill: #fff;
+  }
+  .burger:hover{
+    filter: brightness(7);
+  }
+  .footer-list-link:hover{
+    color: var(--blue);
+  }
+}
+
+@media (max-width: 1199px) {
+  .offer-salary {
+    margin-right: 30px;
+  }
+  .more{
+    margin-right: 0;
+  }
+  .offer-desc{
+    margin-right: 30px;
+  }
+  .footer{
+    padding: 70px 0 70px;
+  }
+}
+
+@media (max-width: 991px) {
+  .offer-img{
+    margin-right: 0;
+  }
+  .offer-desc {
+    text-align: center;
+    margin-right: 0;
+  }
+  .offer-salary {
+    margin-right: 0;
+  }
+  .more{
+    margin: 0 auto;
+  }
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: .3s;
+  }
+  .is-open{
+    transform: translateX(0);
+  }
+  .menu-item:not(:last-child){
+    margin-right: 0px;
+  }
+  .menu-link{
+    transition: .2s;
+  }
+  .button-link{
+    margin-right: 0;
+  }
+  .navbar-mobile, .close{
+    display: flex;
+  }
+}
+
+@media (max-width: 575px) {
+  .header{
+    text-align: center;
+  }
+  .hero-title{
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .footer{
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .card{
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .section-title{
+    text-align: center;
+  }
+  .footer-logo{
+
+    margin: 0 auto 10px;
+  }
+  .footer-desc{
+    margin: 0 auto 10px;
+  }
+
+}
+
+@media (max-width: 401px) {
+  .tags-group{
+    justify-content: center;
+  }
+  .tags-label {
+    text-align: center;
+    flex: 100%;
+    margin-right: 0;
+  }
+  .button-primary{
+    padding: 15px;
   }
 }
