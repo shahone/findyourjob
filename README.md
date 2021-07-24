@@ -1,4 +1,4 @@
-# findyourjob
+# findYourJob
 Интенсив Glo Academy
 
 ## Используются
